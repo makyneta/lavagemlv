@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <!-- Metadados -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Scripts -->
+    <script src="assets/scripts/home.js" defer></script>
+    <!-- Title & Favicon -->
+    <title>Lavagem LV | Detalhe Automóvel Premium</title>
+    <link rel="icon" type="image/png" href="assets/images/logos/logo.png">
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <img src="assets/images/logos/logo.png" alt="Lavagem LV Logo">
+                <span>LAVAGEM <small>LV</small></span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contacto" class="nav-btn">Reservar</a></li>
+            </ul>
+
+            <div class="mobile-menu-icon" id="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge">Premium Car Wash</span>
+                    <h1>Onde a precisão encontra o <span>brilho.</span></h1>
+                    <p>Tratamento especializado para quem não aceita menos que a perfeição no seu veículo.</p>
+                    <div class="actions">
+                        <a href="#servicos" class="btn-primary">Ver Serviços</a>
+                        <a href="#contacto" class="btn-secondary">Localização</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <div class="container">
+                <h2 class="section-title">Serviços Especializados</h2>
+                <div class="services-grid">
+                    <div class="card">
+                        <div class="icon">🚿</div>
+                        <h3>Lavagem Detalhada</h3>
+                        <p>Limpeza técnica exterior com descontaminação de pintura e rodas.</p>
+                    </div>
+                    <!-- <div class="card">
+                        <div class="icon">✨</div>
+                        <h3>Proteção Cerâmica</h3>
+                        <p>Blindagem de longa duração contra raios UV, arranhões leves e sujidade.</p>
+                    </div> -->
+                    <div class="card">
+                        <div class="icon">💺</div>
+                        <h3>Interior VIP</h3>
+                        <p>Higienização profunda de estofos, hidratação de peles e purificação do ar.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">💎</div>
+                        <h3>Polimento Técnico</h3>
+                        <p>Remoção de micro-riscos e hologramas para um acabamento espelhado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container contact-grid">
+                <div class="contact-header">
+                    <h2 class="section-title">Agende o seu brilho</h2>
+                    <p class="phone-highlight">Fale connosco: <a href="tel:+351900000000">+351 916 425 154</a></p>
+                </div>
+
+                <form id="contact-form" class="minimal-form">
+                    <div class="form-row">
+                        <input type="text" id="contact-name" placeholder="Seu Nome" required>
+                        <input type="tel" id="contact-phone" placeholder="Telemóvel" required>
+                    </div>
+                    <input type="email" id="contact-email" placeholder="E-mail" required>
+                    <textarea id="contact-message"
+                        placeholder="Que serviço procura? (Ex: Lavagem Exterior, Polimento...)" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Pedido</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>Copyright &copy; 2025 <a href="https://makyneta.github.io" target="_blank" rel="noopener">Makyneta Studios, Lda</a>. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/351916425154" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

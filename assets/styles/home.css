@@ -1,0 +1,525 @@
+/* ==========================================================================
+   LAVAGEM LV - CSS CONSOLIDADO (Premium Dark Mode)
+   ========================================================================== */
+
+:root {
+    --bg-dark: #0a0a0b;
+    --card-bg: #141416;
+    --primary: #a2d149; /* Verde Lima do Logo */
+    --primary-dark: #8bb33d;
+    --text-main: #ffffff;
+    --text-dim: #c7c7d0;
+    --accent-blue: #004d99;
+    --whatsapp-green: #25D366;
+    --header-height: 90px;
+}
+
+/* 1. Base Geral
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* 2. Componentes Globais
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+/* 3. Header & Navegação
+   ========================================================================== */
+header {
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: var(--header-height);
+    display: flex !important;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+header.scrolled {
+    background: rgba(10, 10, 11, 0.95);
+    height: 70px;
+    border-bottom-color: var(--primary);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.logo img {
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.logo small {
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after { width: 100%; }
+.nav-menu a:hover { color: var(--primary); }
+
+.nav-btn {
+    background: var(--primary);
+    color: var(--bg-dark) !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(162, 209, 73, 0.3);
+}
+
+.mobile-menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* 4. Hero Section
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.83)), 
+                url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(162, 209, 73, 0.1), transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    display: inline-block;
+    padding: 5px 12px;
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 4.8rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.hero-text h1 span {
+    background: linear-gradient(to right, #a2d149, #e0e0e0); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+    color: var(--text-dim);
+    font-size: 1.25rem;
+    max-width: 550px;
+    margin-bottom: 45px;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 18px 35px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary { background: var(--primary); color: var(--bg-dark); }
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(162, 209, 73, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--text-dim);
+    color: var(--text-dim);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* 5. Serviços
+   ========================================================================== */
+.services {
+    padding: 120px 0;
+    background: linear-gradient(to top, var(--bg-dark), #101012);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.card .icon {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: var(--primary);
+}
+
+.card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: 1rem;
+}
+
+/* 6. Contacto
+   ========================================================================== */
+.contact {
+    padding: 120px 0;
+    background: linear-gradient(to bottom, var(--bg-dark), #0f0f11);
+}
+
+.contact-header { text-align: center; margin-bottom: 50px; }
+
+.phone-highlight {
+    font-size: 1.6rem;
+    color: var(--text-dim);
+    margin-top: -30px;
+    font-weight: 300;
+}
+
+.phone-highlight a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.phone-highlight a:hover { text-shadow: 0 0 10px rgba(162, 209, 73, 0.4); }
+
+.minimal-form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.minimal-form input, 
+.minimal-form textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px;
+    color: var(--text-main);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.minimal-form input:focus, 
+.minimal-form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 0 3px rgba(162, 209, 73, 0.2);
+}
+
+.minimal-form textarea { height: 150px; resize: vertical; }
+
+.minimal-form .btn-primary {
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* 7. Footer & WhatsApp
+   ========================================================================== */
+footer { background: var(--bg-dark); }
+.footer-bottom {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p { color: var(--text-dim); font-size: 0.85rem; }
+.footer-bottom a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.footer-bottom a:hover { text-decoration: underline; }
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--whatsapp-green);
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover { transform: scale(1.05) translateY(-5px); }
+
+/* 8. Media Queries (Responsividade Corrigida)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-text h1 { font-size: 3.8rem; }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-icon { 
+        display: block !important; 
+        z-index: 2000;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu {
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 85%;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(10, 10, 11, 0.98) 0%, rgba(20, 20, 22, 0.99) 100%);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 140px 50px; 
+        gap: 30px; /* Aumentado ligeiramente para melhor leitura */
+        
+        transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1500;
+        box-shadow: -15px 0 40px rgba(0,0,0,0.7);
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        list-style: none;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-menu.active li:nth-child(1) { transition-delay: 0.15s; }
+    .nav-menu.active li:nth-child(2) { transition-delay: 0.25s; }
+    .nav-menu.active li:nth-child(3) { transition-delay: 0.35s; }
+
+    .nav-menu a {
+        font-size: 1.2rem !important;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--text-dim); /* Cor base mais suave */
+        text-decoration: none;
+        transition: 0.4s;
+        display: block;
+    }
+
+    /* Estilo do botão "Reservar" igual aos outros, mas com a cor da marca */
+    .nav-menu .nav-btn {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        color: var(--primary) !important; /* Mantém o verde para destaque */
+        font-size: 1.2rem !important;
+        font-weight: 700 !important; /* Ligeiramente mais grosso para destacar a ação */
+        letter-spacing: 4px;
+        text-align: left;
+    }
+
+    .nav-menu a:hover {
+        color: var(--primary);
+        transform: translateX(10px);
+    }
+
+    /* Pequena linha decorativa que agora acompanha o padding do menu */
+    .nav-menu::before {
+        content: '';
+        position: absolute;
+        left: 25px;
+        top: 140px;
+        height: 150px;
+        width: 1px;
+        background: linear-gradient(to bottom, var(--primary), transparent);
+        opacity: 0.5;
+    }.badge {
+        display: none !important;
+    }
+
+    .hero-text h1 {
+        margin-top: 10px; /* Ajuste opcional para o título não subir demasiado */
+    }
+
+    header.scrolled .nav-menu { top: 70px; }
+
+    .hero-text h1 { font-size: 2.5rem; }
+    .hero { text-align: center; }
+    .actions { flex-direction: column; }
+    .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 { font-size: 2.5rem; }
+    .section-title { font-size: 1.8rem; }
+}
